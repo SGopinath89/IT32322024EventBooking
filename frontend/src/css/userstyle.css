@@ -1,0 +1,635 @@
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&display=swap:wght@300;700&display=swap');
+
+/* Login Page */
+
+.login-background{
+    background-color:hsla(0,0%,100%,1);
+background-image:
+radial-gradient(at 51% 100%, hsla(139,68%,51%,0.26) 0px, transparent 50%),
+radial-gradient(at 53% 0%, hsla(139,68%,51%,0.26) 0px, transparent 50%),
+radial-gradient(at 0% 0%, hsla(183,68%,51%,1) 0px, transparent 50%),
+radial-gradient(at 100% 100%, hsla(33,68%,51%,0.87) 0px, transparent 50%),
+radial-gradient(at 0% 100%, hsla(183,68%,51%,1) 0px, transparent 50%),
+radial-gradient(at 100% 0%, hsla(33,68%,51%,0.87) 0px, transparent 50%);
+
+    height: 100vh;
+}
+
+.login-dancing01{
+    height: 80vh;
+    margin-top: 10vh;
+    filter: blur(6px);
+}
+
+.login-dancing02{
+    height: 80vh;
+    margin-top: 10vh;
+    position: absolute;
+    right: 9%;
+    z-index: 1;
+    
+}
+
+.login-rectangle{
+    background-color: #cbe7e563;
+    height: 430px;
+    width: 430px;
+    position: absolute;
+    top: 18vh;
+    right: 12%;
+    transform: rotate(32deg);
+    
+}
+
+.login-form{
+    background-color: rgba(255, 255, 255, 0.479);
+    height: 80vh;
+    width: 30%;
+    position: absolute;
+    top: 10vh;
+    left: 3%;
+    border-radius: 30px;
+    box-shadow: 2px 2px 15px 2px rgb(255, 255, 255);
+    
+    
+}
+
+.login-forgot:any-link{
+    color: black;
+    text-decoration: none;
+}
+
+.login-forgot:hover{
+    color:gray
+}
+
+.login-font{
+    font-family:  'Trebuchet MS', sans-serif;
+    margin-left: 10%;
+    font-weight: lighter;
+    font-size: 14px;
+    
+}
+
+.login-form h1{
+    font-size: 28px;
+}
+.login-textbox{
+    margin-left: 10%;
+    width: 80%;
+    height: 7vh;
+    border: none;
+    border-radius: 5px;
+}
+
+.login-padding{
+    height: 3vh;
+}
+
+.login-signin{
+    width: 80%;
+    margin-left: 10%;
+    padding: 3% 0px;
+    margin-top: 5vh;
+    background-color: #F25019;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 2px 2px 15px 2px #F25019;
+    color: white;
+    font-family:  sans-serif;
+    font-weight:lighter;
+    font-size: 20px;
+}
+
+.login-para{
+    margin-left: 37%;
+    width: 80%;
+    padding-bottom: 2vh;
+
+}
+
+.login-direct{
+    width: 120px;
+    height: 45px;
+    border-radius: 40px;
+    border: none;
+    box-shadow: 2px 2px 15px 2px #ffffff;
+
+    
+}
+
+.login-direct>img{
+    width: 30px;
+}
+
+/*End of Login Page*/
+
+/*Registration Page*/
+
+.reg-textbox{
+    margin-left: 10%;
+    width: 80%;
+    height: 5vh;
+    border: none;
+    border-radius: 5px;
+}
+
+.reg-form h1{
+    font-size: 28px;
+}
+
+.reg-signup{
+    width: 80%;
+    margin-left: 10%;
+    padding: 2% 0px;
+    margin-top: 3vh;
+    background-color: #F25019;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 2px 2px 15px 2px #F25019;
+    color: white;
+    font-family:  sans-serif;
+    font-weight:lighter;
+    font-size: 16px;
+}
+
+.reg-form{
+    background-color: rgba(255, 255, 255, 0.479);
+    height: 90vh;
+    width: 30%;
+    position: absolute;
+    top: 6vh;
+    left: 3%;
+    border-radius: 30px;
+    box-shadow: 2px 2px 15px 2px rgb(255, 255, 255);
+    
+    
+}
+
+.reg-para{
+    margin-left:47%;
+    width: 10%;
+    padding-bottom: 2vh;
+    display: inline-block;
+
+}
+
+.reg-line{
+    display: inline-block;
+    color: rgb(0, 0, 0);
+    position: absolute;
+    width: 140px;
+    margin-left: 3%;
+    border-width: 2px;
+   
+}
+
+  
+
+/*End Of Registration Page*/
+
+/*Home page*/
+
+.home-header{
+    width: 100%;
+    height: 80vh;
+    
+}
+.home-header-slide{
+    width: 100%;
+    height: 80vh;
+    overflow: hidden;
+    
+}
+.home-header-fade{
+    height: 70vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color:hsl(0, 0%, 0%);
+    background-image:
+    radial-gradient(at 100% 21%, hsla(312,0%,56%,1) 0px, transparent 50%),
+    radial-gradient(at 12% 92%, hsla(241,78%,56%,1) 0px, transparent 50%),
+    radial-gradient(at 99% 78%, hsla(240,0%,56%,1) 0px, transparent 50%),
+    radial-gradient(at 24% 30%, hsla(241,78%,56%,1) 0px, transparent 50%);
+    opacity: 0.2;
+    filter: blur(8px);
+    
+}
+
+.home-logo{
+    position: absolute;
+    top: 5%;
+    left: 2%;
+    z-index: 1;
+   /* box-shadow: 5px 2px 10px black;*/
+    width: 98%;
+    
+}
+
+.home-logo>img{
+    width: 125px;
+   display: inline-block;
+   padding-right: 10px;
+   position: relative;
+   top: -5px;
+   padding-left: 50px;
+   z-index: 1;
+    
+}
+.home-logo>label{
+   display: inline-block;
+    color: white;
+    font-size: 29px;
+    position: relative;
+    top: 0;
+    font-family: "aclonica";
+    font-weight: bold;
+    
+}
+.home-logo ul{
+    display: inline-block;
+    position: relative;
+    left: 30%;
+    width: 40%;
+    top: 0;
+    color: white;
+    
+}
+.home-logo li{
+    list-style: none;
+    display: inline-block;
+    padding-right: 5%;
+    
+}
+.home-logo li:hover{
+    font-weight: bold;
+    
+}
+.home-logo button:hover{
+    background-color:#F5167E ;
+    
+    transition: 0.8s;
+}
+
+.home-logo button{
+    border-radius: 50px;
+    padding: 10px 30px ;
+    background-color: transparent;
+    color: white;
+    border:1px solid white;
+    font-size: 16px;
+}
+.home-search{
+    background-color:hsla(235,22%,31%,1);
+background-image:
+radial-gradient(at 53% 51%, hsla(239,49%,22%,1) 0px, transparent 50%),
+radial-gradient(at 0% 100%, hsla(238,100%,22%,1) 0px, transparent 50%),
+radial-gradient(at 100% 0%, hsla(238,100%,22%,1) 0px, transparent 50%),
+radial-gradient(at 100% 100%, hsla(238,100%,22%,1) 0px, transparent 50%),
+radial-gradient(at 0% 0%, hsla(237,100%,22%,1) 0px, transparent 50%);
+    height: 15vh;
+    width: 70%;
+    border-radius: 20px;
+    position: absolute;
+    top: 73vh;
+    left: 15%;
+    box-shadow: 5px 2px 10px black;
+}
+
+.home-search label{
+    color: white;
+}
+
+.home-search input{
+    border: none;
+    border-bottom: 1px solid white;
+    background-color: transparent;
+    width: 150px;
+    color:white;
+}
+.home-search input:focus{
+    
+    border-bottom: 2px solid rgb(255, 255, 255);
+    background-color: transparent;
+    
+    
+    
+}
+
+.home-search span{
+    display: inline-block;
+    padding-left: 12%;
+    padding-top: 3%;
+    
+}
+
+.home-subtopics{
+    position: absolute;
+    color: white;
+    top: 25vh;
+    left: 6%;
+    width: 94%;
+    z-index: 1;
+}
+
+.home-subtopics>h1{
+    font-weight: 400;
+    font-size: 40px;
+}
+
+.home-subtopics>p{
+    font-size: 23px;
+}
+
+.home-subtopics .home-subtopics-buttons{
+    position: relative;
+    left: 55%;
+    width: 45%;
+}
+
+.home-subtopics .home-subtopics-buttons>button{
+    padding: 2% 8%;
+    border-radius: 50px;
+    margin-left: 3%;
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    font-size: 18px;
+    
+}
+
+.home-subtopics .home-subtopics-buttons>button:hover{
+    background-color:#F5167E ;
+    box-shadow: -1px 5px 20px 10px rgba(255, 255, 255, 0.37);
+    border: 2px solid white;
+    transition: 0.5s;
+}
+
+.home-upcoming{
+    padding:10% 15%;
+    color: navy;
+}
+
+.home-upcoming>h2{
+    
+    display:inline-block;
+    padding-right: 14%;
+}
+
+.home-upcoming>select{
+    border: none;
+    padding: 1% 4%;
+    display: inline-block;
+    color: navy;
+}
+
+.home-upcoming-sub{
+    margin-left: 7%;
+    margin-top: -5%;
+}
+
+.home-upcoming-sub img{
+    width: 80%;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    padding-bottom: 20px;
+}
+
+.home-upcoming-sub .home-mmdd{
+    line-height: 17px; 
+    display: inline-block;
+    margin-left: 5%;
+}
+.home-upcoming-sub .home-month{
+    font-size:12px ;
+    text-align: center;
+    padding-left: 4px;
+    color: #3D37F1;
+    font-weight: bold;
+}
+
+.home-upcoming-sub .home-date{
+    font-size: 29px;
+}
+
+.home-event-name{
+    display: inline-block;
+    width: 60%;
+    padding-left: 4%;
+    line-height: 20px;
+    font-weight: bold;
+    font-family: "DM Sans";
+}
+
+.home-upcoming-sub .home-loadmore{
+    border-radius: 50px;
+    background-color: transparent;
+    border: 1px solid navy;
+    color: navy;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: "DM Sons";
+}
+
+.home-upcoming-sub .home-loadmore:hover{
+    
+    color: #F5167E;
+    border: 1px solid white;
+    box-shadow: -1px 5px 20px 5px #f5167edc;
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 2s ease-out;
+  }
+  
+.fade-in-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.home-booknow{
+    width: 100%;
+    height: 37vh;
+    margin-top: 15vh;
+    background-color: #EEE1FF;
+}
+
+.home-booknow>img{
+    margin-top: -22vh;
+    height: 46vh;
+    padding-left: 6%;
+}
+
+.home-booknow-content{
+    display: inline-block;
+    padding-left: 5%;
+    padding-top: 2%;
+    color: black;
+}
+
+.home-booknow-content>p{
+    font-size: 18px;
+}
+
+.home-booknow-content>button{
+    padding: 3% 20%;
+    border-radius: 50px;
+    background-color: #F5167E;
+    color: white;
+    border: none;
+    margin-top: 3%;
+}
+
+.home-recent-event>h2{
+    color: navy;
+    padding:2% 10%;
+    padding-top: 5%;
+}
+
+.home-recent-event img{
+    width: 100%;
+    height: 35vh;
+}
+
+/*Booking*/
+
+.booking-header{
+    width: 100%;
+    height: 75vh;
+}
+
+.booking-heading{
+    margin-left: 5%;
+    margin-top: 1%;
+}
+
+.orange-ico{
+    color: #F2583E;
+    background-color: #f2593e33;
+    padding:1% 0 ;
+    display: inline-block;
+}
+
+.booking-grayback{
+    background-color: #EFD6D6;
+    padding: 2% 2%;
+    margin-bottom: 3%;
+    margin-left: 3%;
+    width: 50%;
+}
+
+.booking-eventdetails{
+    display: inline-block;
+    padding: 0% 5%;
+    width: 60%;
+    font-weight: bold;
+}
+
+.booking-eventdetails :first-child{
+    padding-bottom: 4%;
+
+}
+
+.booking-eventdetails label{
+    padding-right: 15%;
+}
+
+.booking-buyticket-btn{
+    padding: 1% 8%;
+    width: 30%;
+    position: absolute;
+    top: 105vh;
+    right: 5%;
+    font-weight: bold;
+    color: white;
+    background-color: #171766;
+    border: 0px;
+    font-size: 20px;
+}
+
+.booking-buyticket-btn:hover{
+    box-shadow: -1px 5px 20px 10px #171766c7;
+    transition: 0.5s;
+}
+
+.booking-buyticket-btn i{
+    margin-left: 10%;
+    
+}
+
+.booking-about{
+    margin-left: 5%;
+    margin-top: 4%;
+    width: 75%;
+    text-align: justify;
+}
+
+.booking-about p{
+    margin-top: 2%;
+}
+
+/*End Of Booking*/
+
+/*Reservation*/
+
+.reservation-header{
+    width: 100%;
+    height: 75vh;
+}
+
+.reservation h1{
+    margin-left: 5%;
+    margin-top: 1%;
+}
+
+.reservation-seats{
+    width: 80%;
+    margin-left: 10%;
+    border: 1px solid #2222226b;
+    padding: 3% 5%;
+}
+
+.reservation-seat{
+    border: 1px solid black;
+    width: 5%;
+    text-align: center;
+    margin: 2% 3%;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.reservation-seat:hover{
+    background-color: rgba(128, 128, 128, 0.678);
+}
+
+
+.reservation-row {
+    display: flex;
+    justify-content: center;
+}
+
+.reservation-seat.booked {
+    background-color: red;
+    cursor: not-allowed;
+}
+
+.reservation-seat.selected {
+    background-color: rgb(0, 250, 0);
+}
+
+.reservation-booking-btn{
+    padding: 1% 10%;
+    border: 0;
+    background-color: #171766;
+    color: white;
+    margin: 3% 10%;
+}
+
+.reservation-booking-btn:hover{
+    box-shadow: -1px 5px 20px 10px #171766c7;
+    transition: 0.5s;
+}
