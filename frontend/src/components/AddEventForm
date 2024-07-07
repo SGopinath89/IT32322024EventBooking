@@ -12,3 +12,161 @@ function AddEventForm() {
   const [eventCount, setEventCount] = useState(0);
   const [time, setTime] = useState(0);
   const [description,setDescription] = useState('');
+  useEffect(() => {
+    const fetchEventCount = async () => {
+      try {
+        const response = await axios.get('http://localhost:8080/event/count');
+        setEventCount(response.data.count);
+      } catch (error) {
+        console.error('There was an error fetching the event count!', error);
+      }
+    };
+
+    fetchEventCount();
+  }, []);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const seats = parseInt(noRows) * parseInt(noCols);
+    const newEid = 457 + eventCount ;
+
+    const eventData = {
+      eid: newEid,
+      ename, // Make sure this matches the state variable name
+      venue,
+      date,
+      time:parseFloat(time),
+      price: parseInt(amount),
+      rows: parseInt(noRows),
+      cols: parseInt(noCols),
+      description,
+    };
+
+    console.log(eventData);
+    try {
+      const response = await axios.post('http://localhost:8080/event', eventData);
+      console.log('Event added successfully:', response.data);
+      // Clear form fields after successful submission
+      setEventName('');
+      setVenue('');
+      setDate('');
+      setTime('');
+      setAmount('');
+      setRows('');
+      setCols('');
+      setDescription('');
+    } catch (error) {
+      console.error('There was an error adding the event!', error);
+    }
+  };
+
+  return (
+    <div>
+      <br />
+      <form onSubmit={handleSubmit}>
+        <div>
+          <label className="labelText">*Event Name: </label>
+          <input
+            type="text"
+            className="textbox"
+            placeholder="Ex: Rock the Night"
+            value={ename}
+            onChange={(e) => setEventName(e.target.value)}
+            required
+          />
+        </div>
+        <br />
+        <div>
+          <label className="labelText">*Venue: </label>
+          <input
+            type="text"
+            className="textbox"
+            placeholder="Ex: Business Faculty"
+            value={venue}
+            onChange={(e) => setVenue(e.target.value)}
+            required
+          />
+        </div>
+        <br />
+        <div>
+          <label className="labelText">*Date: </label>
+          <input
+            type="date"
+            placeholder="Ex: 2024-09-24"
+            className="textbox"
+            value={date}
+            onChange={(e) => setDate(e.target.value)}
+            required
+          />
+        </div>
+        <br />
+        <div>
+          <label className="labelText">*Time: </label>
+          <input
+            type="Number"
+            placeholder="Ex: 17.00"
+            className="textbox"
+            value={time}
+            onChange={(e) => setTime(e.target.value)}
+            required
+          />
+        </div>
+        <br />
+        <div>
+          <label className="labelText">*Number of rows in the hall: </label>
+          <input
+            type="number"
+            className="textbox"
+            placeholder="Ex: 50"
+            value={noRows}
+            onChange={(e) => setRows(e.target.value)}
+            required
+          />
+        </div> 
+
+        <br/>
+
+        <div>
+          <label className="labelText">*Number of columns in the hall: </label>
+          <input
+            type="number"
+            className="textbox"
+            placeholder="Ex: 50"
+            value={noCols}
+            onChange={(e) => setCols(e.target.value)}
+            required
+          />
+        </div> 
+
+        <br/>       
+
+        <div>
+          <label className="labelText">*Amount (Rs.): </label>
+          <input
+            type="number"
+            className="textbox"
+            placeholder="Ex: 450"
+            value={amount}
+            onChange={(e) => setAmount(e.target.value)}
+            required
+          />
+        </div>
+        <br />
+        <div>
+        <label className="labelText">Description: </label>
+        <textarea  className='textbox'
+        value={description}
+        onChange={(e) => setDescription(e.target.value)}
+        ></textarea>
+        </div>
+        <br/>
+        <div>
+          <input type="submit" className="formSubmit" value="Add Event" />
+        </div>
+      </form>
+    </div>
+  );
+}
+
+export default AddEventForm;
