@@ -1,1 +1,47 @@
+import React from 'react'
+import '../../css/App.css';
 
+
+import AddEventForm from './AddEventForm';
+import { Sidebar } from './Sidebar';
+
+function Addevent() {
+  const isLoggedIn = !!localStorage.getItem('admin');
+
+  if (!isLoggedIn) {
+      
+      return (
+          <div style={styles.restrict}>
+              <h2><b><i class="bi bi-exclamation-octagon"></i> Restriction</b></h2>
+              <h3>Please log in to access this page - <a href='/login'>Click Here To Visit Login...</a> </h3>
+          </div>
+      );
+  }
+  return (
+    <div className="dashboard">
+      <Sidebar/>
+      <div className='dashboard--content'>
+          <div className="admin">Admin</div>
+          <br></br>
+          <h2>Add Event</h2>
+          <div className='eventForm'>
+            <AddEventForm/>
+          </div>
+      </div>
+    </div>
+  )
+}
+
+export default Addevent
+
+
+const styles={
+  restrict:{
+  padding: '20px 10px',
+  width: '90%',
+  marginLeft: '5%',
+  marginTop: '15%',
+  backgroundColor: '#fff',
+  height:'20vh',
+  }
+}
