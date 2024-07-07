@@ -1,1 +1,14 @@
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import '../../css/App.css';
 
+function AddEventForm() {
+  const [ename, setEventName] = useState('');
+  const [venue, setVenue] = useState('');
+  const [date, setDate] = useState('');
+  const [amount, setAmount] = useState('');
+  const [noRows, setRows] = useState('');
+  const [noCols, setCols] = useState('');
+  const [eventCount, setEventCount] = useState(0);
+  const [time, setTime] = useState(0);
+  const [description,setDescription] = useState('');
