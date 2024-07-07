@@ -34,3 +34,4 @@ public class BookingController {
         return bookings.stream().map(Booking::getSeatno).collect(Collectors.toList());
     }
 }
+
