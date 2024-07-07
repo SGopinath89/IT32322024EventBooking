@@ -21,6 +21,7 @@ export default function HomePage() {
   const navigate = useNavigate();
   const [events, setEvents] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
+  const [displayedEvents, setDisplayedEvents] = useState(6); 
   const rowsRef = useRef([]);
   
   useEffect(() => {
@@ -57,8 +58,9 @@ export default function HomePage() {
     try {
       const response = await fetch('http://localhost:8080/event');
       const data = await response.json();
+      
+      data.sort((a, b) => new Date(b.date) - new Date(a.date));
       setEvents(data);
-      console.log(events);
     } catch (error) {
       console.error('Error fetching events:', error);
     }
@@ -102,6 +104,10 @@ export default function HomePage() {
     }
   };
 
+  const loadMoreEvents = () => {
+    setDisplayedEvents(prev => prev + 6);
+  };
+
   return (
     <div className='home-header'>
       <Slider {...settings} className='home-header-slide'>
@@ -120,8 +126,8 @@ export default function HomePage() {
         <h1>VaVTickets</h1>
         <p>Unlocking Seamless Event Experiences with<br />Our Ticketing System!</p>
         <div className='home-subtopics-buttons'>
-          <button>Get Tickets</button>
-          <button>Learn More</button>
+          <a href='#upcoming'><button > Get Tickets</button></a>
+          <button onClick={()=>navigate('/about')}> About Us </button>
         </div>
       </div>
       <div className='home-header-fade'></div>
@@ -133,20 +139,22 @@ export default function HomePage() {
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
           />
-          <button onClick={handleSearch}>Search</button>
+          
         </span>
         <span>
           <label>Place</label><br />
           <input type='textbox' />
+          
         </span>
         <span>
           <label>Date</label><br />
           <input type='date' />
+          
         </span>
       </div>
 
       <div className='home-upcoming'>
-        <h2>Upcoming Events</h2>
+        <h2 id='upcoming'>Upcoming Events</h2>
         <select>
           <option>Weekdays</option>
           <option>Weekends</option>
@@ -163,18 +171,22 @@ export default function HomePage() {
       <div className='home-upcoming-sub'>
         <div className="container py-5">
           <div className="row fade-in" ref={addToRefs}>
-            {events.map(event => (
-              <div className="col-sm" key={event.eid} value={event.eid} onClick={() => handleEvent(event.eid)}>
-                <img src={event1} alt={event.ename} /><br />
-                <span className='home-mmdd'>
-                  <label className='home-month'>{getMonthName(parseInt(event.date.split('-')[1]))}</label><br />
-                  <label className='home-date'>{event.date.split('-')[2]}</label>
-                </span>
-                <label className='home-event-name'>{event.ename}</label>
+            {events.slice(0, displayedEvents).map(event => (
+              <div className="col-sm-4 home-event" key={event.eid} value={event.eid} onClick={() => handleEvent(event.eid)}>
+                <div className='home-event-compo'>
+                  <img src={event1} alt={event.ename} /><br />
+                  <span className='home-mmdd'>
+                    <label className='home-month'>{getMonthName(parseInt(event.date.split('-')[1]))}</label><br />
+                    <label className='home-date'>{event.date.split('-')[2]}</label>
+                  </span>
+                  <label className='home-event-name'>{event.ename}</label>
+                </div>
               </div>
             ))}
           </div>
-          <center><button className='home-loadmore py-2 px-5'>Load More</button></center>
+          {events.length > displayedEvents && (
+            <center><button className='home-loadmore py-2 px-5' onClick={loadMoreEvents}>Load More</button></center>
+          )}
         </div>
       </div>
 
@@ -191,13 +203,13 @@ export default function HomePage() {
         <h2>Recent Events Photos</h2>
         <div className="container py-5">
           <div className="row fade-in" ref={addToRefs}>
-            <div className="col-sm">
+            <div className="col-sm-4">
               <img src={event2} alt="Event 1" /><br />
             </div>
-            <div className="col-sm">
+            <div className="col-sm-4">
               <img src={event3} alt="Event 1" /><br />
             </div>
-            <div className="col-sm">
+            <div className="col-sm-4">
               <img src={event4} alt="Event 1" /><br />
             </div>
           </div>
