@@ -251,8 +251,8 @@ radial-gradient(at 100% 0%, hsla(33,68%,51%,0.87) 0px, transparent 50%);
 .home-logo ul{
     display: inline-block;
     position: relative;
-    left: 30%;
-    width: 40%;
+    left: 32%;
+    width: 42%;
     top: 0;
     color: white;
     
@@ -265,8 +265,31 @@ radial-gradient(at 100% 0%, hsla(33,68%,51%,0.87) 0px, transparent 50%);
 }
 .home-logo li:hover{
     font-weight: bold;
-    
+    cursor: pointer;
 }
+
+.user-menu {
+    position: relative;
+    
+  }
+  
+  .logout {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: rgb(0, 0, 0);
+    border: 1px solid #ccc;
+    padding: 5px 20px;
+    cursor: pointer;
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    
+  }
+  
+  .logout:hover {
+    background-color: #F5167E;
+  }
+  
 .home-logo button:hover{
     background-color:#F5167E ;
     
@@ -318,6 +341,20 @@ radial-gradient(at 0% 0%, hsla(237,100%,22%,1) 0px, transparent 50%);
     
 }
 
+.home-search-btn{
+    border: 1px solid white;
+    border-radius: 12px;
+    background-color: #171766;
+    color: white;
+    
+}
+
+.home-search-btn:hover{
+    box-shadow: -1px 5px 20px 3px rgba(255, 255, 255, 0.37);
+    background-color: #F5167E;
+    transition: 0.5s;
+}
+
 .home-search span{
     display: inline-block;
     padding-left: 12%;
@@ -349,7 +386,7 @@ radial-gradient(at 0% 0%, hsla(237,100%,22%,1) 0px, transparent 50%);
     width: 45%;
 }
 
-.home-subtopics .home-subtopics-buttons>button{
+.home-subtopics .home-subtopics-buttons button{
     padding: 2% 8%;
     border-radius: 50px;
     margin-left: 3%;
@@ -360,7 +397,7 @@ radial-gradient(at 0% 0%, hsla(237,100%,22%,1) 0px, transparent 50%);
     
 }
 
-.home-subtopics .home-subtopics-buttons>button:hover{
+.home-subtopics .home-subtopics-buttons button:hover{
     background-color:#F5167E ;
     box-shadow: -1px 5px 20px 10px rgba(255, 255, 255, 0.37);
     border: 2px solid white;
@@ -394,13 +431,14 @@ radial-gradient(at 0% 0%, hsla(237,100%,22%,1) 0px, transparent 50%);
     width: 80%;
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
-    padding-bottom: 20px;
+    
 }
 
 .home-upcoming-sub .home-mmdd{
     line-height: 17px; 
     display: inline-block;
     margin-left: 5%;
+    padding-top: 15px;
 }
 .home-upcoming-sub .home-month{
     font-size:12px ;
@@ -493,6 +531,16 @@ radial-gradient(at 0% 0%, hsla(237,100%,22%,1) 0px, transparent 50%);
 .home-recent-event img{
     width: 100%;
     height: 35vh;
+}
+
+.home-event{
+    padding-bottom: 4%;
+    
+}
+.home-event-compo:hover{
+    img{
+    box-shadow: -1px 5px 20px 10px rgba(0, 0, 0, 0.37);
+    }
 }
 
 /*Booking*/
@@ -632,4 +680,168 @@ radial-gradient(at 0% 0%, hsla(237,100%,22%,1) 0px, transparent 50%);
 .reservation-booking-btn:hover{
     box-shadow: -1px 5px 20px 10px #171766c7;
     transition: 0.5s;
+}
+
+.reservation-booking-btn.nonpayment{
+    cursor: not-allowed;
+    background-color: gray;
+}
+
+.reservation-booking-btn.payment{
+    cursor: pointer;
+}
+
+
+.about-right, .about-left {
+    text-align: justify;
+    padding: 20px;
+}
+
+.about-right {
+    width: 45%;
+    float: right;
+    margin-left: 5%;
+}
+
+.about-left {
+    width: 45%;
+    float: left;
+    margin-right: 5%;
+}
+
+img.about-left, img.about-right {
+    width: 50%;
+    height: 60vh;
+    object-fit: cover;
+    border-top-left-radius: 150px;
+    border-bottom-right-radius: 150px;
+}
+
+.about-stage {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 50px 0;
+}
+
+.about-header{
+    position: absolute;
+    top: 35vh;
+    color: white;
+    left: 35%;
+    letter-spacing: 20px;
+    overflow: hidden;
+    border-right: .15em solid orange; /* Adjust color to match your design */
+    white-space: nowrap;
+    margin: 0 auto;
+    animation: typing 1.5s steps(40,end), blink-caret .55s step-end infinite;
+    width: 25%;
+
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 25% }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange; /* Adjust color to match your design */ }
+}
+
+
+.contact-header{
+    position: absolute;
+    top: 35vh;
+    color: white;
+    left: 30%;
+    letter-spacing: 20px;
+    overflow: hidden;
+    border-right: .15em solid orange; /* Adjust color to match your design */
+    white-space: nowrap;
+    margin: 0 auto;
+    animation: typingcontact 1.5s steps(40,end), blink-caret .55s step-end infinite;
+    width: 33%;
+
+}
+
+@keyframes typingcontact {
+    from { width: 0 }
+    to { width: 33% }
+}
+
+.contact-content {
+    margin: 40px auto;
+    padding: 20px;
+    max-width: 800px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.contact-content h3, .contact-content p {
+    line-height: 1.6;
+    color: #555;
+    margin: 10px 0;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUpText 1.3s ease-out forwards;
+}
+
+.contact-content h3 {
+    color: #333;
+    animation-delay: 1.3s;
+}
+
+.contact-content p {
+    animation-delay: 1.3s;
+}
+
+@keyframes fadeInUpText {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.contact-info, .feedback-info {
+    margin-top: 20px;
+}
+
+.contact-info p, .feedback-info p {
+    margin: 5px 0;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUpText 2s ease-out forwards;
+}
+
+.contact-info p {
+    animation-delay: 1.7s;
+}
+
+.feedback-info p {
+    animation-delay: 1.9s;
+}
+
+.contact-info h3, .feedback-info h3 {
+    animation-delay: 1.5s;
+}
+
+.contact-info a, .feedback-info a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+.contact-info a:hover, .feedback-info a:hover {
+    text-decoration: underline;
 }
