@@ -1,0 +1,19 @@
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 2.3rem;
+    height: 94vh;
+    width: 250px;
+}
+.log {
+    text-align: center;
+    padding: 20px;
+    color: #27374d;
+    align-items: center;
+    display: flex;
+    gap: 20px;
+}
+.logo .icon {
+    font-size: 1.4rem;
+}
+
