@@ -18,3 +18,10 @@ import java.util.Collections;
 @RestController
 @RequestMapping("/event")
 @CrossOrigin(origins = "http://localhost:3000")
+public class EventController extends EventTicketingSystemController<Event, Integer> {
+
+    @Autowired
+    private EventRepo eventRepo;
+
+    
+}
