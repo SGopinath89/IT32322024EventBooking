@@ -14,3 +14,7 @@ import lk.ac.vau.Model.Event;
 import lk.ac.vau.Repo.EventRepo;
 
 import java.util.Collections;
+
+@RestController
+@RequestMapping("/event")
+@CrossOrigin(origins = "http://localhost:3000")
