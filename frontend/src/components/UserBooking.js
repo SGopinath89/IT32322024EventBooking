@@ -89,6 +89,8 @@ export default function UserBooking() {
 
       <button className='booking-buyticket-btn' onClick={() => handleEvent(id)}>BUY TICKET <i className="bi bi-arrow-right-circle-fill fs-3" style={{ color: "#F2583E" }}></i></button>
 
+      
+
       <div className='booking-about ' >
         <h5>ABOUT</h5>
         <p>{event.description}</p>
