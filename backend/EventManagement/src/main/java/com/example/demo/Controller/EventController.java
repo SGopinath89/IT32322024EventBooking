@@ -23,5 +23,14 @@ public class EventController extends EventTicketingSystemController<Event, Integ
     @Autowired
     private EventRepo eventRepo;
 
-    
+    @PostMapping
+    public Event createEvent(@RequestBody Event event) {
+        return eventRepo.save(event);
+    }
+
+    @GetMapping("/count")
+    public ResponseEntity<?> getEventCount() {
+        long count = eventRepo.count();
+        return ResponseEntity.ok(Collections.singletonMap("count", count));
+    }
 }
